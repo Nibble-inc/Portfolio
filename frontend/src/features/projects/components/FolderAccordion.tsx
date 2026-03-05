@@ -58,15 +58,15 @@ export default function FolderAccordion() {
     const [activeTab, setActiveTab] = useState(0);
 
     return (
-        <section className="snap-start snap-always w-full min-h-screen py-24 flex items-center justify-start relative z-10 px-4 md:px-12" id="projects">
-            <div className="max-w-[95vw] w-full h-[750px] md:h-[850px] flex shadow-2xl bg-[#0a0a0a] p-2 md:p-3 rounded-xl border border-white/5">
+        <section className="snap-start snap-always w-full min-h-screen py-24 flex items-center justify-center relative z-10 px-4 md:px-12" id="projects">
+            <div className="max-w-[95vw] w-full h-[65vh] md:h-[75vh] min-h-[500px] max-h-[800px] flex shadow-2xl bg-[#0a0a0a] p-2 md:p-3 rounded-xl border border-white/5">
 
                 {/* Left 'Spine' of the folder system */}
-                <div className="w-16 md:w-24 bg-[#e5e5e5] h-full flex flex-col items-center justify-end pb-8 rounded-sm border-r border-zinc-400 z-10 shrink-0">
-                    <h2 className="transform rotate-180 text-3xl md:text-5xl font-[Outfit] text-zinc-900 tracking-wider whitespace-nowrap select-none" style={{ writingMode: 'vertical-rl' }}>
+                <div className="w-10 sm:w-16 md:w-24 bg-[#e5e5e5] h-full flex flex-col items-center justify-end pb-8 rounded-sm border-r border-zinc-400 z-10 shrink-0">
+                    <h2 className="transform rotate-180 text-xl sm:text-3xl md:text-5xl font-[Outfit] text-zinc-900 tracking-wider whitespace-nowrap select-none" style={{ writingMode: 'vertical-rl' }}>
                         GRID DAILY_01-05
                     </h2>
-                    <p className="transform rotate-180 text-[10px] md:text-xs font-oswald text-zinc-600 tracking-widest whitespace-nowrap select-none mt-8" style={{ writingMode: 'vertical-rl' }}>
+                    <p className="transform rotate-180 text-[8px] sm:text-[10px] md:text-xs font-oswald text-zinc-600 tracking-widest whitespace-nowrap select-none mt-8" style={{ writingMode: 'vertical-rl' }}>
                         Visual Studies / Images / Log
                     </p>
                 </div>
@@ -95,8 +95,8 @@ export default function FolderAccordion() {
                                     <div className="absolute top-2 left-0 w-full h-full bg-black/5 rounded-tl-xl border-l border-t border-white/5" />
 
                                     {/* Tab Mini Title */}
-                                    <div className="w-[40px] md:w-[60px] h-full flex items-start justify-center pt-2 z-10 relative">
-                                        <span className="transform rotate-90 whitespace-nowrap text-[10px] md:text-[11px] uppercase font-oswald font-semibold tracking-widest origin-left translate-x-4">
+                                    <div className="w-[32px] sm:w-[40px] md:w-[60px] h-full flex items-start justify-center pt-2 z-10 relative">
+                                        <span className="transform rotate-90 whitespace-nowrap text-[8px] sm:text-[10px] md:text-[11px] uppercase font-oswald font-semibold tracking-widest origin-left translate-x-4">
                                             {project.tabTitle}
                                         </span>
                                     </div>
@@ -105,24 +105,24 @@ export default function FolderAccordion() {
                                 {/* Main Body */}
                                 <div className="flex-1 relative w-full h-full bg-black/5">
                                     {/* Vertical title (spine of the individual folder) */}
-                                    <div className="absolute top-0 left-0 w-[40px] md:w-[60px] h-full flex flex-col items-center pt-8 border-r border-black/10 z-20">
-                                        <span style={{ writingMode: 'vertical-rl' }} className="font-[Outfit] text-2xl md:text-3xl tracking-widest transform rotate-180 opacity-90 whitespace-nowrap">
+                                    <div className="absolute top-0 left-0 w-[32px] sm:w-[40px] md:w-[60px] h-full flex flex-col items-center pt-8 border-r border-black/10 z-20">
+                                        <span style={{ writingMode: 'vertical-rl' }} className="font-[Outfit] text-lg sm:text-2xl md:text-3xl tracking-widest transform rotate-180 opacity-90 whitespace-nowrap">
                                             {project.title}
                                         </span>
                                     </div>
 
                                     {/* Expanded Content View */}
-                                    <div className="absolute inset-0 left-[40px] md:left-[60px] overflow-hidden">
+                                    <div className="absolute inset-0 left-[32px] sm:left-[40px] md:left-[60px] overflow-hidden">
                                         <motion.div
                                             initial={false}
                                             animate={{ opacity: isActive ? 1 : 0, x: isActive ? 0 : 20 }}
                                             transition={{ duration: 0.4, delay: isActive ? 0.2 : 0 }}
-                                            className="absolute inset-0 p-6 md:p-10 flex flex-col min-w-[300px] h-full"
+                                            className="absolute inset-0 p-3 sm:p-6 md:p-10 flex flex-col min-w-[180px] sm:min-w-[250px] md:min-w-[300px] h-full"
                                         >
                                             <div className="flex flex-col mt-4">
-                                                <p className="font-oswald tracking-widest text-sm md:text-sm mb-1 opacity-70">FILE_{project.id} // {project.category}</p>
-                                                <h3 className="font-[Outfit] text-4xl md:text-5xl lg:text-6xl uppercase leading-none mb-4">{project.title}</h3>
-                                                <p className="font-sans text-sm md:text-base opacity-80 max-w-[280px] lg:max-w-sm">{project.description}</p>
+                                                <p className="font-oswald tracking-widest text-[10px] sm:text-sm mb-1 opacity-70">FILE_{project.id} // {project.category}</p>
+                                                <h3 className="font-[Outfit] text-2xl sm:text-4xl md:text-5xl lg:text-6xl uppercase leading-tight md:leading-none mb-2 md:mb-4">{project.title}</h3>
+                                                <p className="font-sans text-[11px] sm:text-sm md:text-base opacity-80 max-w-[200px] sm:max-w-[280px] lg:max-w-sm">{project.description}</p>
                                             </div>
 
                                             <div className="mt-auto mb-8 h-48 md:h-64 lg:h-72 w-full max-w-lg overflow-hidden relative">

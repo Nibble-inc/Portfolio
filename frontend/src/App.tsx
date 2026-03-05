@@ -3,6 +3,7 @@ import Aurora from '@/components/animations/Aurora';
 
 import FolderAccordion from '@/features/projects/components/FolderAccordion';
 import ContactSection from '@/features/contact/components/ContactSection';
+import TeamSection from '@/features/team/components/TeamSection';
 
 function App() {
   return (
@@ -31,16 +32,16 @@ function App() {
               <div className="absolute -left-16 md:-left-32 -top-12 md:-top-24 w-48 md:w-80 h-32 md:h-56 bg-zinc-800/20 backdrop-blur-[2px] z-0 hidden md:block" />
 
               {/* Title Container */}
-              <div className="relative z-20">
-                <h2 className="absolute -top-6 md:-top-10 left-0 md:-left-12 text-zinc-500 font-oswald uppercase tracking-widest text-lg md:text-3xl font-bold select-none">
+              <div className="relative z-20 w-full max-w-full flex flex-col items-center md:block">
+                <h2 className="md:absolute md:-top-10 md:-left-12 text-zinc-500 font-oswald uppercase tracking-widest text-lg md:text-3xl font-bold select-none mb-2 md:mb-0 text-center md:text-left">
                   We are
                 </h2>
 
-                <h1 className="font-anton uppercase text-7xl md:text-[10rem] lg:text-[15rem] leading-none tracking-normal text-white drop-shadow-2xl select-none">
+                <h1 className="font-anton uppercase text-[5.5rem] sm:text-7xl md:text-[10rem] lg:text-[15rem] leading-none tracking-normal text-white drop-shadow-2xl select-none text-center">
                   Nibble
                 </h1>
 
-                <h3 className="absolute right-[-100px] -bottom-8 md:-bottom-12 text-zinc-500 font-oswald font-semibold uppercase tracking-widest text-sm md:text-xl select-none">
+                <h3 className="md:absolute md:right-[-100px] md:-bottom-12 text-zinc-500 font-oswald font-semibold uppercase tracking-widest text-sm md:text-xl select-none mt-2 md:mt-0 text-center md:text-right">
                   A developers enterprise
                 </h3>
               </div>
@@ -55,6 +56,9 @@ function App() {
 
         {/* --- CONTACT SECTION --- */}
         <ContactSection />
+
+        {/* --- TEAM SECTION --- */}
+        <TeamSection />
 
         {/* --- GLOBAL STICKY HEADER NAV --- */}
         <div className="fixed top-0 left-0 w-full p-8 md:p-12 flex justify-between items-start z-50 pointer-events-none">
@@ -79,9 +83,9 @@ function App() {
 
           {/* NAV LINKS */}
           <nav className="hidden md:flex gap-8 uppercase font-oswald text-sm md:text-base tracking-widest font-semibold text-zinc-500 pointer-events-auto">
-            <a href="#home" className="hover:text-emerald-400 transition-colors duration-300">About Us</a>
             <a href="#projects" className="hover:text-emerald-400 transition-colors duration-300">Projects</a>
             <a href="#contact" className="hover:text-emerald-400 transition-colors duration-300">Contact Us</a>
+            <a href="#team" className="hover:text-emerald-400 transition-colors duration-300">About Us</a>
           </nav>
         </div>
 

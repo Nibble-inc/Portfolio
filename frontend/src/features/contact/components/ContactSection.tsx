@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Mail, Instagram, User, Github } from "lucide-react";
+import { Mail, Instagram, MapPin, Github } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function ContactSection() {
@@ -63,32 +63,32 @@ export default function ContactSection() {
 
 
                     <div className="flex flex-col space-y-10 w-full drop-shadow-[0_4px_10px_rgba(0,0,0,0.9)]">
-                        <a href="mailto:info@nibble.com" className="group flex items-center gap-6 font-inter text-2xl md:text-3xl text-zinc-100 hover:text-emerald-400 transition-all duration-300">
+                        <a href="mailto:nibblework@gmail.com" className="group flex items-center gap-6 font-inter text-2xl md:text-3xl text-zinc-100 hover:text-emerald-400 transition-all duration-300">
                             <div className="w-16 h-16 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-emerald-400/20 group-hover:border-emerald-400/50 group-hover:text-emerald-400 transition-all duration-300 backdrop-blur-md">
                                 <Mail size={28} strokeWidth={1.5} />
                             </div>
                             <span className="font-medium tracking-wide group-hover:-translate-y-1 transition-transform duration-300">nibblework@gmail.com</span>
                         </a>
 
-                        <a href="#" className="group flex items-center gap-6 font-inter text-2xl md:text-3xl text-zinc-100 hover:text-emerald-400 transition-all duration-300">
+                        <a href="https://www.instagram.com/nibbledev/" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-6 font-inter text-2xl md:text-3xl text-zinc-100 hover:text-emerald-400 transition-all duration-300">
                             <div className="w-16 h-16 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-emerald-400/20 group-hover:border-emerald-400/50 group-hover:text-emerald-400 transition-all duration-300 backdrop-blur-md">
                                 <Instagram size={28} strokeWidth={1.5} />
                             </div>
                             <span className="font-medium tracking-wide group-hover:-translate-y-1 transition-transform duration-300">@nibbledev</span>
                         </a>
 
-                        <a href="#" className="group flex items-center gap-6 font-inter text-2xl md:text-3xl text-zinc-100 hover:text-emerald-400 transition-all duration-300">
+                        <a href="https://maps.google.com/?q=Villa+Mercedes,+San+Luis,+Argentina" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-6 font-inter text-2xl md:text-3xl text-zinc-100 hover:text-emerald-400 transition-all duration-300">
                             <div className="w-16 h-16 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-emerald-400/20 group-hover:border-emerald-400/50 group-hover:text-emerald-400 transition-all duration-300 backdrop-blur-md">
-                                <User size={28} strokeWidth={1.5} />
+                                <MapPin size={28} strokeWidth={1.5} />
                             </div>
-                            <span className="font-medium tracking-wide group-hover:-translate-y-1 transition-transform duration-300">+54 2657 317442</span>
+                            <span className="font-medium tracking-wide group-hover:-translate-y-1 transition-transform duration-300">Villa Mercedes, San Luis</span>
                         </a>
 
-                        <a href="#" className="group flex items-center gap-6 font-inter text-2xl md:text-3xl text-zinc-100 hover:text-emerald-400 transition-all duration-300">
+                        <a href="https://github.com/Nibble-inc" target="_blank" rel="noopener noreferrer" className="group flex items-center gap-6 font-inter text-2xl md:text-3xl text-zinc-100 hover:text-emerald-400 transition-all duration-300">
                             <div className="w-16 h-16 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:bg-emerald-400/20 group-hover:border-emerald-400/50 group-hover:text-emerald-400 transition-all duration-300 backdrop-blur-md">
                                 <Github size={28} strokeWidth={1.5} />
                             </div>
-                            <span className="font-medium tracking-wide group-hover:-translate-y-1 transition-transform duration-300">nibble-inc</span>
+                            <span className="font-medium tracking-wide group-hover:-translate-y-1 transition-transform duration-300">Nibble-inc</span>
                         </a>
                     </div>
                 </div>
