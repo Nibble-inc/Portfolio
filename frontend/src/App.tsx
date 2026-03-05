@@ -61,16 +61,19 @@ function App() {
           {/* LOGO LINK with Overlapping Micro-interaction */}
           <a href="#home" className="group relative uppercase font-anton text-[20px] md:text-[35px] leading-none select-none tracking-wider pointer-events-auto w-16 h-16 md:w-20 md:h-20 flex items-start justify-start">
 
-            {/* Estado por defecto: "La Je" */}
-            <div className="absolute top-0 left-0 flex flex-col text-white transition-all duration-500 ease-in-out transform group-hover:-translate-y-full group-hover:opacity-0 origin-bottom">
+            {/* Estado Hover: "La Je" */}
+            <div className="absolute top-0 left-0 flex flex-col text-white transition-all duration-500 ease-in-out transform translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
               <span>La</span>
               <span>Je</span>
             </div>
 
-            {/* Estado Hover: Isotipo "N" Gris/Glowing */}
-            <div className="absolute top-0 left-0 flex flex-col items-center justify-center transition-all duration-500 ease-in-out transform translate-y-full opacity-0 group-hover:translate-y-0 group-hover:opacity-100">
-              <span className="text-4xl md:text-6xl text-zinc-500 group-hover:text-emerald-400 group-hover:drop-shadow-[0_0_20px_rgba(16,185,129,0.8)] transition-all duration-700">N</span>
-              <span className="font-oswald text-[10px] md:text-xs tracking-[0.3em] text-zinc-600 mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-1000 delay-100">NIBBLE</span>
+            {/* Estado por defecto: Logo Nuevo (Imagen) */}
+            <div className="absolute top-0 left-0 flex items-start justify-start transition-all duration-500 ease-in-out transform group-hover:-translate-y-full group-hover:opacity-0 origin-bottom">
+              <img
+                src={`${import.meta.env.BASE_URL}logo.svg`}
+                alt="Nibble Logo"
+                className="w-12 h-12 md:w-14 md:h-14 object-contain transition-all duration-700"
+              />
             </div>
           </a>
 
